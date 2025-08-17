@@ -1,8 +1,9 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import { assets } from '@/assets/assets'
 
 const Navbar = () => {
+  const [isScroll, setIsScroll] = useState(false)
   const sideMenuRef = useRef()
   const openMenu = () => {
     sideMenuRef.current.style.transform = 'translateX(-16rem)'
@@ -10,6 +11,16 @@ const Navbar = () => {
   const closeMenu = () => {
     sideMenuRef.current.style.transform = 'translateX(16rem)'
   }
+
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      if (scrollY > 50) {
+        setIsScroll(true)
+      } else {
+        setIsScroll(false)
+      }
+    })
+  }, [])
 
   return (
     <>
@@ -21,7 +32,13 @@ const Navbar = () => {
         />
       </div>
 
-      <nav className="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50">
+      <nav
+        className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 ${
+          isScroll
+            ? '[background-color:rgba(255,255,255,0.5)] backdrop-blur-lg'
+            : ''
+        }`}
+      >
         <a href="#top">
           <Image
             src={assets.logo}
@@ -30,7 +47,13 @@ const Navbar = () => {
           />
         </a>
 
-        <ul className="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50">
+        <ul
+          className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50 ${
+            isScroll
+              ? ''
+              : '[background-color:rgba(255,255,255,0.5)] backdrop-blur-lg'
+          }`}
+        >
           <li>
             <a href="#top">Home</a>
           </li>
@@ -47,7 +70,11 @@ const Navbar = () => {
 
         <div className="flex items-center gap-4">
           <button>
-            <Image src={assets.moon_icon} alt="Change theme" className="w-6 cursor-pointer" />
+            <Image
+              src={assets.moon_icon}
+              alt="Change theme"
+              className="w-6 cursor-pointer"
+            />
           </button>
 
           <a
@@ -59,7 +86,11 @@ const Navbar = () => {
           </a>
 
           <button className="block md:hidden ml-3" onClick={openMenu}>
-            <Image src={assets.menu_black} alt="Menu" className="w-6 cursor-pointer" />
+            <Image
+              src={assets.menu_black}
+              alt="Menu"
+              className="w-6 cursor-pointer"
+            />
           </button>
         </div>
 

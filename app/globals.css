@@ -4,5 +4,7 @@
 	--color-light-hover: #fcf4ff;
 	--color-dark-hover: #2a004a;
 	--color-dark-theme: #11001F;
+	--shadow-light: 4px 4px 0 #000;
+	--shadow-dark: 4px 4px 0 #fff;
 }
 

@@ -107,9 +107,9 @@ export const serviceData = [
 ]
 
 export const infoList = [
-    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Languages', description: 'HTML, CSS, JavaScript React Js, Next Js' },
-    { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Education', description: 'B.Tech in Computer Science' },
-    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Projects', description: 'Built more than 5 projects' }
+    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Experiencia En Desarrollo Web', description: 'Cuatro meses de practicas',subdescription:'Kennwort Consulting', document:'/KENNWORT_CartaRecomendacionCastellano_AlbertCastroAlbacete.pdf' , button: 'Referencias'},
+    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Experiencia como Modelista', description: 'Diez años como Clay Modeler', subdescription:'EDAG Engineering Spain S.L.', document:'/EDAG_CartaRecomendacion_AlbertCastroAlbacete_CENSORED.pdf', button: 'Recomendación'},
+    { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Educación Formación Profesional', description: 'ILERNA',subdescription: 'Desarrollo Aplicaciones Web', document:'/finished_grade_certificate_CENSORED.pdf' , button: 'Expediente'},
 ];
 
 export const toolsData = [
