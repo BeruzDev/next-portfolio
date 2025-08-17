@@ -7,8 +7,14 @@ import project_icon from './project-icon.png';
 import project_icon_dark from './project-icon-dark.png';
 import vscode from './vscode.png';
 import firebase from './firebase.png';
+import supabase from './supabase.png'
 import figma from './figma.png';
 import git from './git.png';
+import github from './github.png';
+import react from './react.png';
+import mysql from './mysql.png';
+import node from './node.png';
+import express from './express.png';
 import mongodb from './mongodb.png';
 import right_arrow_white from './right-arrow-white.png';
 import logo from './logo.png';
@@ -46,7 +52,13 @@ export const assets = {
     project_icon_dark,
     vscode,
     firebase,
+    supabase,
+    express,
     figma,
+    react,
+    node,
+    github,
+    mysql,
     git,
     mongodb,
     right_arrow_white,
@@ -113,5 +125,5 @@ export const infoList = [
 ];
 
 export const toolsData = [
-    assets.vscode, assets.firebase, assets.mongodb, assets.figma, assets.git
+    assets.react, assets.node, assets.express, assets.supabase, assets.mysql, assets.vscode, assets.git, assets.github,
 ];
