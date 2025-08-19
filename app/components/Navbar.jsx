@@ -58,13 +58,16 @@ const Navbar = () => {
             <a href="#top">Home</a>
           </li>
           <li>
-            <a href="#about">About me</a>
+            <a href="#about">Sobre mí</a>
           </li>
           <li>
-            <a href="#projects">Projects</a>
+            <a href="#skills">Habilidades</a>
           </li>
           <li>
-            <a href="#contact">Contact me</a>
+            <a href="#projects">Proyectos</a>
+          </li>
+          <li>
+            <a href="#contact">Contáctame</a>
           </li>
         </ul>
 
@@ -81,7 +84,7 @@ const Navbar = () => {
             href="#contact"
             className="hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4"
           >
-            Contact{' '}
+            Contáctame{' '}
             <Image src={assets.arrow_icon} alt="Contact" className="w-3" />
           </a>
 
@@ -113,13 +116,16 @@ const Navbar = () => {
             <a href="#top">Home</a>
           </li>
           <li onClick={closeMenu}>
-            <a href="#about">About me</a>
+            <a href="#about">Sobre mí</a>
           </li>
           <li onClick={closeMenu}>
-            <a href="#projects">Projects</a>
+            <a href="#skills">Habilidades</a>
           </li>
           <li onClick={closeMenu}>
-            <a href="#contact">Contact me</a>
+            <a href="#projects">Proyectos</a>
+          </li>
+          <li onClick={closeMenu}>
+            <a href="#contact">Contáctame</a>
           </li>
         </ul>
       </nav>

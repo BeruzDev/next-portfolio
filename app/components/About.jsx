@@ -4,7 +4,7 @@ import { assets, infoList, toolsData } from '@/assets/assets'
 
 const About = () => {
   return (
-    <div id="about" className="w-full px-[12%] py-10 scroll-mt-20">
+    <div id="about" className="w-full px-[12%] py-10 scroll-mt-20 mb-24">
       <h4 className="text-center mb-2 text-lg">Conoce más</h4>
       <h2 className="text-center text-5xl ">Sobre mí</h2>
 
@@ -19,7 +19,7 @@ const About = () => {
         <div className="flex-1">
           <p className="mb-10 max-w-2xl">
             Soy Albert Castro, desarrollador web, enfocado en aprender y
-            profundizar en React, MongoDB y SQL, y Node.js con Express. He
+            profundizar en React, Supabase y SQL, y Node.js con Express. He
             realizado prácticas en Kennwort Consulting & Technologies, donde
             trabajé en proyectos Saas reales enfocados en la venta de entradas y
             control de acceso de gimnasios. Con 10 años de experiencia previa
