@@ -72,6 +72,14 @@ const Navbar = () => {
         </ul>
 
         <div className="flex items-center gap-4">
+          <a href='https://github.com/BeruzDev' target="_blank" rel="noopener noreferrer">
+            <Image
+              src={assets.github_icon}
+              alt="GitHub Icon"
+              className='w-6 cursor-pointer'
+            />
+          </a>
+          
           <button>
             <Image
               src={assets.moon_icon}

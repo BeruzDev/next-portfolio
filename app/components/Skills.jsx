@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 const Skills = () => {
   return (
-    <div id="skills" className="w-full px-[12%] py-10 scroll-mt-20 mb-24">
+    <div id="skills" className="w-full px-[12%] py-10 scroll-mt-20 mb-40">
       <h4 className="text-center mb-2 text-lg">Estas son mis</h4>
       <h2 className="text-center text-5xl ">Habilidades</h2>
 

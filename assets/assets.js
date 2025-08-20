@@ -5,13 +5,19 @@ import edu_icon from './edu-icon.png';
 import edu_icon_dark from './edu-icon-dark.png';
 import project_icon from './project-icon.png';
 import project_icon_dark from './project-icon-dark.png';
+import linkedin from './linkedin.png'
 import vscode from './vscode.png';
-import firebase from './firebase.png';
 import supabase from './supabase.png'
-import figma from './figma.png';
 import git from './git.png';
 import github from './github.png';
 import react from './react.png';
+import html from './HTML5.png'
+import css from './CSS3.png';
+import js from './JavaScript.png'
+import shocketio from './Socket.io.png'
+import sass from './Sass.png'
+import ts from './TypeScript.png'
+import openai from './OpenAi.png'
 import mysql from './mysql.png';
 import node from './node.png';
 import express from './express.png';
@@ -43,8 +49,14 @@ import right_arrow from './right-arrow.png';
 import send_icon from './send-icon.png';
 import right_arrow_bold from './right-arrow-bold.png';
 import right_arrow_bold_dark from './right-arrow-bold-dark.png';
+import github_icon from './github-icon.png';
+import link_icon from './link-icon.png';
+import link_icon_dark from './link-icon-dark.png'
 
 export const assets = {
+    github_icon,
+    link_icon,
+    link_icon_dark,
     user_image,
     code_icon,
     code_icon_dark,
@@ -53,10 +65,8 @@ export const assets = {
     project_icon,
     project_icon_dark,
     vscode,
-    firebase,
     supabase,
     express,
-    figma,
     react,
     node,
     github,
@@ -89,29 +99,58 @@ export const assets = {
     right_arrow,
     send_icon,
     right_arrow_bold,
-    right_arrow_bold_dark
+    right_arrow_bold_dark,
+    openai,
+    html, 
+    css,
+    js,
+    shocketio,
+    ts,
+    sass
 };
 
-export const workData = [
+export const projectData = [
     {
-        title: 'Frontend project',
-        description: 'Web Design',
+        title: 'Acortador de links',
         bgImage: '/work-1.png',
+        githubLink: 'https://github.com/BeruzDev/link-shortener',
+        link: 'https://craftit.vercel.app/',
+        techIcons: [assets.node, assets.express, assets.supabase, assets.react, assets.css]
     },
     {
-        title: 'Geo based app',
-        description: 'Mobile App',
+        title: 'Traductor con IA',
         bgImage: '/work-2.png',
+        githubLink: 'https://github.com/BeruzDev/ai-translate',
+        link: 'https://ai-translate-project.vercel.app/',
+        techIcons: [assets.react, assets.ts, assets.openai]
     },
     {
-        title: 'Photography site',
-        description: 'Web Design',
+        title: 'Chat en tiempo real',
         bgImage: '/work-3.png',
+        githubLink: 'https://github.com/BeruzDev/Chat-node.js',
+        link: 'https://chat-node-js-2u1m.onrender.com/',
+        techIcons: [assets.node, assets.express, assets.shocketio, assets.mysql]
     },
     {
-        title: 'UI/UX designing',
-        description: 'UI/UX Design',
+        title: 'Animación de scroll',
         bgImage: '/work-4.png',
+        githubLink: 'https://github.com/BeruzDev/ichiban-scroll',
+        link: 'https://ichiban-clone.netlify.app/',
+        techIcons: [assets.html, assets.css, assets.js]
+    },
+    {
+        title: 'Juego de mecanografía',
+        bgImage: '/work-5.png',
+        githubLink: 'https://github.com/BeruzDev/a-typing-game',
+        link: 'https://atypinggame.netlify.app/',
+        techIcons: [assets.react, assets.sass]
+    },
+    {
+        title: 'Extensión VSCode',
+        bgImage: '/work-6.png',
+        githubLink: 'https://github.com/BeruzDev/vsc_extension_toggle_comments',
+        link: 'https://marketplace.visualstudio.com/items?itemName=BeruzDev.toggle-comments-visibility',
+        techIcons: [assets.ts]
     },
 ]
 
