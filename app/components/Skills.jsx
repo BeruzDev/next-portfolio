@@ -17,7 +17,10 @@ const Skills = () => {
 
       <div className="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-6 my-10 justify-center max-w-4xl mx-auto ">
         {skillsData.map((skills, index) => (
-          <div key={index} className='border border-gray-400 rounded-lg px-8 py-12 hover:-translate-y-1 duration-500 hover:[box-shadow:var(--shadow-light)] cursor-pointer hover:[background-color:var(--color-light-hover)]'>
+          <div
+            key={index}
+            className="border border-gray-400 rounded-lg px-8 py-12 hover:-translate-y-1 duration-500 hover:[box-shadow:var(--shadow-light)] cursor-pointer hover:[background-color:var(--color-light-hover)]"
+          >
             <Image src={skills.icon} alt={skills.title} className="w-10" />
             <h3 className="text-lg my-4 text-gray-700">{skills.title}</h3>
             <ul className="space-y-2">
@@ -29,6 +32,12 @@ const Skills = () => {
             </ul>
             <a
               href={skills.link}
+              target={skills.title === 'Soft Skills' ? '_blank' : undefined}
+              rel={
+                skills.title === 'Soft Skills'
+                  ? 'noopener noreferrer'
+                  : undefined
+              }
               className="flex items-center gap-2 text-sm mt-5"
             >
               Ver más{' '}

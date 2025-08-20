@@ -106,7 +106,8 @@ export const assets = {
     js,
     shocketio,
     ts,
-    sass
+    sass,
+    linkedin
 };
 
 export const projectData = [

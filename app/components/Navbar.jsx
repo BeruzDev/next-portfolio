@@ -79,6 +79,14 @@ const Navbar = () => {
               className='w-6 cursor-pointer'
             />
           </a>
+
+          <a href='https://www.linkedin.com/in/albert-castro-albacete-38204615a/' target="_blank" rel="noopener noreferrer">
+            <Image
+              src={assets.linkedin}
+              alt="Link Icon"
+              className='w-6 cursor-pointer'
+            />
+          </a>
           
           <button>
             <Image
