@@ -29,8 +29,8 @@ import mail_icon from './mail_icon.png';
 import mail_icon_dark from './mail_icon_dark.png';
 import profile_img from './profile-img.png';
 import download_icon from './download-icon.png';
+import download_icon_dark from './download-icon-dark.png'
 import hand_icon from './hand-icon.png';
-import header_bg_color from './header-bg-color.png';
 import moon_icon from './moon_icon.png';
 import sun_icon from './sun_icon.png';
 import arrow_icon from './arrow-icon.png';
@@ -49,14 +49,18 @@ import right_arrow from './right-arrow.png';
 import send_icon from './send-icon.png';
 import right_arrow_bold from './right-arrow-bold.png';
 import right_arrow_bold_dark from './right-arrow-bold-dark.png';
-import github_icon from './github-icon.png';
 import link_icon from './link-icon.png';
+import github_icon from './github-icon.png';
+import github_icon_dark from './github-icon-dark.png';
 import link_icon_dark from './link-icon-dark.png'
+import heart_icon from './heart-icon.png'
 
 export const assets = {
     github_icon,
+    github_icon_dark,
     link_icon,
     link_icon_dark,
+    heart_icon,
     user_image,
     code_icon,
     code_icon_dark,
@@ -80,8 +84,8 @@ export const assets = {
     mail_icon_dark,
     profile_img,
     download_icon,
+    download_icon_dark,
     hand_icon,
-    header_bg_color,
     moon_icon,
     sun_icon,
     arrow_icon,
