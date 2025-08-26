@@ -19,7 +19,7 @@ import shocketio from './Socket.io.png'
 import shocketio_dark from './Socket.io_dark.png'
 import sass from './Sass.png'
 import openai from './OpenAi.png'
-import ts from './typescript.png'
+import typescript from ''
 import mysql from './mysql.png'
 import node from './nodejs.png'
 import express from './express.png'
@@ -117,7 +117,7 @@ export const assets = {
   softskills_icon_dark,
   sun_icon,
   supabase,
-  ts,
+  typescript,
   user_image,
   vscode,
 }
@@ -147,7 +147,7 @@ export const projectData = [
     githubIcon: assets.github_icon,
     link: 'https://ai-translate-project.vercel.app/',
     linkIcon: assets.link_icon,
-    techIcons: [assets.react, assets.ts, assets.openai],
+    techIcons: [assets.react, assets.typescript, assets.openai],
   },
   {
     title: 'Chat en tiempo real',
@@ -187,7 +187,7 @@ export const projectData = [
     githubIcon: assets.github_icon_dark,
     link: 'https://marketplace.visualstudio.com/items?itemName=BeruzDev.toggle-comments-visibility',
     linkIcon: assets.link_icon_dark,
-    techIcons: [assets.ts],
+    techIcons: [assets.typescript],
   },
 ]
 
