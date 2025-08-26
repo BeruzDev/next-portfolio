@@ -24,21 +24,32 @@ const Skills = ({ isDarkMode }) => {
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.3 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
         className="text-center text-5xl "
       >
         Habilidades
       </motion.h2>
 
-      <p className="text-center max-w-2xl mx-auto mt-5 mb-12">
+      <motion.p
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.7 }}
+        className="text-center max-w-2xl mx-auto mt-5 mb-12"
+      >
         He adquirido solidas habilidades blandas durante mi etapa como
         modelista. Ahora estoy listo para aplicarlas y combinarlas con mis
         habilidades técnicas en el desarrollo web.
-      </p>
+      </motion.p>
 
-      <div className="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-6 my-10 justify-center max-w-4xl mx-auto ">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.6, delay: 0.9 }}
+        className="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-6 my-10 justify-center max-w-4xl mx-auto "
+      >
         {skillsData.map((skills, index) => (
-          <div
+          <motion.div
+            whileHover={{ scale: 1.05 }}
             key={index}
             className="border border-gray-400 rounded-lg px-8 py-12 hover:-translate-y-1 duration-500 hover:[box-shadow:var(--shadow)] cursor-pointer hover:[background-color:var(--color-light-hover)]"
           >
@@ -68,7 +79,7 @@ const Skills = ({ isDarkMode }) => {
                   ? 'noopener noreferrer'
                   : undefined
               }
-              className="flex items-center gap-2 text-sm mt-5"
+              className="flex items-center gap-2 text-sm mt-5 hover:[color:var(--color-hover)]"
             >
               Ver más{' '}
               <Image
@@ -78,12 +89,12 @@ const Skills = ({ isDarkMode }) => {
                     : assets.right_arrow_bold
                 }
                 alt="Right Arrow"
-                className="w-4"
+                className="w-4 "
               />
             </a>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </motion.div>
   )
 }
