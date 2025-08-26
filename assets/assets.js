@@ -30,9 +30,8 @@ import mail_icon_dark from './mail_icon_dark.png';
 import profile_img from './profile-img.png';
 import download_icon from './download-icon.png';
 import download_icon_dark from './download-icon-dark.png'
-import hand_icon from './hand-icon.png';
-import moon_icon from './moon_icon.png';
-import sun_icon from './sun_icon.png';
+import moon_icon from './moon-icon.png';
+import sun_icon from './sun-icon.png';
 import arrow_icon from './arrow-icon.png';
 import arrow_icon_dark from './arrow-icon-dark.png';
 import menu_black from './menu-black.png';
@@ -53,6 +52,8 @@ import link_icon from './link-icon.png';
 import github_icon from './github-icon.png';
 import github_icon_dark from './github-icon-dark.png';
 import link_icon_dark from './link-icon-dark.png'
+import copy_check from './copy-check.png'
+import copy_check_dark from './copy-check-dark.png'
 import heart_icon from './heart-icon.png'
 
 export const assets = {
@@ -85,7 +86,6 @@ export const assets = {
     profile_img,
     download_icon,
     download_icon_dark,
-    hand_icon,
     moon_icon,
     sun_icon,
     arrow_icon,
@@ -111,7 +111,9 @@ export const assets = {
     shocketio,
     ts,
     sass,
-    linkedin
+    linkedin,
+    copy_check,
+    copy_check_dark
 };
 
 export const projectData = [
@@ -119,42 +121,54 @@ export const projectData = [
         title: 'Acortador de links',
         bgImage: '/work-1.png',
         githubLink: 'https://github.com/BeruzDev/link-shortener',
+        githubIcon: assets.github_icon_dark,
         link: 'https://craftit.vercel.app/',
+        linkIcon: assets.link_icon_dark,
         techIcons: [assets.node, assets.express, assets.supabase, assets.react, assets.css]
     },
     {
         title: 'Traductor con IA',
         bgImage: '/work-2.png',
         githubLink: 'https://github.com/BeruzDev/ai-translate',
+        githubIcon: assets.github_icon,
         link: 'https://ai-translate-project.vercel.app/',
+        linkIcon: assets.link_icon,
         techIcons: [assets.react, assets.ts, assets.openai]
     },
     {
         title: 'Chat en tiempo real',
         bgImage: '/work-3.png',
         githubLink: 'https://github.com/BeruzDev/Chat-node.js',
+        githubIcon: assets.github_icon_dark,
         link: 'https://chat-node-js-2u1m.onrender.com/',
+        linkIcon: assets.link_icon_dark,
         techIcons: [assets.node, assets.express, assets.shocketio, assets.mysql]
     },
     {
         title: 'Animación de scroll',
         bgImage: '/work-4.png',
         githubLink: 'https://github.com/BeruzDev/ichiban-scroll',
+        githubIcon: assets.github_icon,
         link: 'https://ichiban-clone.netlify.app/',
+        linkIcon: assets.link_icon,
         techIcons: [assets.html, assets.css, assets.js]
     },
     {
         title: 'Juego de mecanografía',
         bgImage: '/work-5.png',
         githubLink: 'https://github.com/BeruzDev/a-typing-game',
+        githubIcon: assets.github_icon_dark,
         link: 'https://atypinggame.netlify.app/',
+        linkIcon: assets.link_icon_dark,
         techIcons: [assets.react, assets.sass]
     },
     {
         title: 'Extensión VSCode',
         bgImage: '/work-6.png',
         githubLink: 'https://github.com/BeruzDev/vsc_extension_toggle_comments',
+        githubIcon: assets.github_icon_dark,
         link: 'https://marketplace.visualstudio.com/items?itemName=BeruzDev.toggle-comments-visibility',
+        linkIcon: assets.link_icon_dark,
         techIcons: [assets.ts]
     },
 ]

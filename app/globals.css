@@ -6,7 +6,8 @@
 	--color-nav: #FFFFFF;
 	--color-nav-small: #cfcfcf;
   --color-hover: #8A8A8A;
-  --shadow: 4px 4px 0 #000;
+  --color-dark-button: #000000;
+  --shadow: 4px 4px 0 #3f3f3f;
 }
 
 [data-theme='dark'] {
@@ -15,5 +16,6 @@
 	--color-nav: #363636;
 	--color-nav-small: #333333;
   --color-hover: #838383;
-  --shadow: 4px 4px 0 #fff;
+  --color-dark-button: #363636;
+  --shadow: 4px 4px 0 #a7a7a7;
 }

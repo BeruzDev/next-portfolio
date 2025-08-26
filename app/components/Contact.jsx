@@ -3,12 +3,12 @@ import { assets } from '@/assets/assets'
 import React, { useState } from 'react'
 
 
-const Contact = () => {
+const Contact = ({idDarkMode}) => {
   const [result, setResult] = useState('')
 
   const onSubmit = async (event) => {
     event.preventDefault()
-    setResult('Sending....')
+    setResult('Enviando....')
     const formData = new FormData(event.target)
 
     formData.append('access_key', 'e141a586-9973-4a5c-8f44-7fb4f5fdab36')
@@ -21,7 +21,7 @@ const Contact = () => {
     const data = await response.json()
 
     if (data.success) {
-      setResult('Form Submitted Successfully')
+      setResult('Formulario enviado con éxito')
       event.target.reset()
     } else {
       console.log('Error', data)
@@ -44,14 +44,14 @@ const Contact = () => {
       <form className="max-w-2xl mx-auto" onSubmit={onSubmit}>
         <div className="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-6 mb-8">
           <input
-            className="flex-1 p-3 otuline-none border-[0.5px] border-gray-400 rounded-md bg-white"
+            className="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md [color:var(--color-text)] [placeholder-color:var(--color-hover)]"
             type="text"
             placeholder="Introduce tu nombre"
             required
 						name='name'
           />
           <input
-            className="flex-1 p-3 otuline-none border-[0.5px] border-gray-400 rounded-md bg-white"
+            className="flex-1 p-3 otuline-none border-[0.5px] border-gray-400 rounded-md [color:var(--color-text)] [placeholder-color:var(--color-hover)]"
             type="email"
             placeholder="Introduce tu correo electrónico"
             required
@@ -59,7 +59,7 @@ const Contact = () => {
           />
         </div>
         <textarea
-          className="resize-none w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md bg-white mb-6"
+          className="resize-none w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md [color:var(--color-text)] [placeholder-color:var(--color-hover)] mb-6"
           rows="6"
           placeholder="Introduce tu mensaje"
           required
@@ -67,12 +67,12 @@ const Contact = () => {
         ></textarea>
 
         <button
-          className="py-3 px-8 w-max flex items-center justify-between gap-2 bg-black/80 text-white rounded-full mx-auto hover:bg-black duration-500 cursor-pointer"
+          className="py-3 px-8 w-max flex items-center justify-between gap-2 [background-color:var(--color-dark-button)] text-white rounded-full mx-auto hover:bg-black duration-500 cursor-pointer"
           type="submit"
         >
           Enviar
           <Image
-            src={assets.right_arrow_white}
+            src={idDarkMode ? assets.right_arrow_bold : assets.right_arrow_bold_dark}
             alt="Right Arrow"
             className="w-4"
           />

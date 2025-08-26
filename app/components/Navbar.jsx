@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import { assets } from '@/assets/assets'
 
-const Navbar = ({isDarkMode, setIsDarkMode}) => {
+const Navbar = ({ isDarkMode, setIsDarkMode }) => {
   const [isScroll, setIsScroll] = useState(false)
   const sideMenuRef = useRef()
   const openMenu = () => {
@@ -20,6 +20,12 @@ const Navbar = ({isDarkMode, setIsDarkMode}) => {
         setIsScroll(false)
       }
     })
+  }, [])
+
+  useEffect(() => {
+    if (sideMenuRef.current) {
+      sideMenuRef.current.style.transform = 'translateX(16rem)'
+    }
   }, [])
 
   return (
@@ -48,7 +54,7 @@ const Navbar = ({isDarkMode, setIsDarkMode}) => {
         >
           <li>
             <a href="#top">Home</a>
-          </li> 
+          </li>
           <li>
             <a href="#about">Sobre mí</a>
           </li>
@@ -58,41 +64,69 @@ const Navbar = ({isDarkMode, setIsDarkMode}) => {
           <li>
             <a href="#projects">Proyectos</a>
           </li>
+          <li>
+            <a
+              href="https://github.com/BeruzDev"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/albert-castro-albacete-38204615a/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+            </a>
+          </li>
         </ul>
 
+        <div className="flex items-center gap-3">
+          <a
+            href="https://github.com/BeruzDev"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              src={isDarkMode ? assets.github_icon_dark : assets.github_icon}
+              alt="GitHub Icon"
+              className="block md:hidden w-6 cursor-pointer"
+            />
+          </a>
 
-        <div className="flex items-center gap-4">
+          <a
+            href="https://www.linkedin.com/in/albert-castro-albacete-38204615a/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              src={assets.linkedin}
+              alt="Link Icon"
+              className="block md:hidden w-6 cursor-pointer"
+            />
+          </a>
 
-          <button onClick={() => setIsDarkMode(prev => !prev)}>
+          <button onClick={() => setIsDarkMode((prev) => !prev)}>
             <Image
               src={isDarkMode ? assets.sun_icon : assets.moon_icon}
               alt="Change theme"
               className="w-6 cursor-pointer"
             />
           </button>
-          
-          <a href='https://github.com/BeruzDev' target="_blank" rel="noopener noreferrer">
-            <Image
-              src={isDarkMode ? assets.github_icon_dark : assets.github_icon}
-              alt="GitHub Icon"
-              className='w-6 cursor-pointer'
-            />
-          </a>
 
-          <a href='https://www.linkedin.com/in/albert-castro-albacete-38204615a/' target="_blank" rel="noopener noreferrer">
-            <Image
-              src={assets.linkedin}
-              alt="Link Icon"
-              className='w-6 cursor-pointer'
-            />
-          </a>
-          
           <a
             href="#contact"
             className="hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4"
           >
             Contáctame{' '}
-            <Image src={isDarkMode ? assets.arrow_icon_dark : assets.arrow_icon} alt="Contact" className="w-3" />
+            <Image
+              src={isDarkMode ? assets.arrow_icon_dark : assets.arrow_icon}
+              alt="Contact"
+              className="w-3"
+            />
           </a>
 
           <button className="block md:hidden ml-3" onClick={openMenu}>

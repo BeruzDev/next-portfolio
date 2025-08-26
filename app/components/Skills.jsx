@@ -2,12 +2,33 @@ import React from 'react'
 import { skillsData } from '@/assets/assets'
 import { assets } from '@/assets/assets'
 import Image from 'next/image'
+import { motion } from 'motion/react'
 
-const Skills = () => {
+const Skills = ({ isDarkMode }) => {
   return (
-    <div id="skills" className="w-full px-[12%] py-10 scroll-mt-20 mb-40">
-      <h4 className="text-center mb-2 text-lg">Estas son mis</h4>
-      <h2 className="text-center text-5xl ">Habilidades</h2>
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+      id="skills"
+      className="w-full px-[12%] py-10 scroll-mt-35 mb-55"
+    >
+      <motion.h4
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+        className="text-center mb-2 text-lg"
+      >
+        Estas son mis
+      </motion.h4>
+      <motion.h2
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+        className="text-center text-5xl "
+      >
+        Habilidades
+      </motion.h2>
 
       <p className="text-center max-w-2xl mx-auto mt-5 mb-12">
         He adquirido solidas habilidades blandas durante mi etapa como
@@ -19,13 +40,22 @@ const Skills = () => {
         {skillsData.map((skills, index) => (
           <div
             key={index}
-            className="border border-gray-400 rounded-lg px-8 py-12 hover:-translate-y-1 duration-500 hover:[box-shadow:var(--shadow-light)] cursor-pointer hover:[background-color:var(--color-light-hover)]"
+            className="border border-gray-400 rounded-lg px-8 py-12 hover:-translate-y-1 duration-500 hover:[box-shadow:var(--shadow)] cursor-pointer hover:[background-color:var(--color-light-hover)]"
           >
-            <Image src={skills.icon} alt={skills.title} className="w-10" />
-            <h3 className="text-lg my-4 text-gray-700">{skills.title}</h3>
+            <Image
+              src={isDarkMode ? skills.iconDark : skills.icon}
+              alt={skills.title}
+              className="w-10"
+            />
+            <h3 className="text-lg my-4 [color:var(--color-text)]">
+              {skills.title}
+            </h3>
             <ul className="space-y-2">
               {skills.skills.map((skill, index) => (
-                <li key={index} className="text-sm text-gray-600 leading-5">
+                <li
+                  key={index}
+                  className="text-sm [color:var(--color-text)] leading-5"
+                >
                   {skill}
                 </li>
               ))}
@@ -42,7 +72,11 @@ const Skills = () => {
             >
               Ver más{' '}
               <Image
-                src={assets.right_arrow}
+                src={
+                  isDarkMode
+                    ? assets.right_arrow_bold_dark
+                    : assets.right_arrow_bold
+                }
                 alt="Right Arrow"
                 className="w-4"
               />
@@ -50,7 +84,7 @@ const Skills = () => {
           </div>
         ))}
       </div>
-    </div>
+    </motion.div>
   )
 }
 
