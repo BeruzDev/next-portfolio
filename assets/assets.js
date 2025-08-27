@@ -259,5 +259,5 @@ export const toolsData = [
   { icon: assets.mysql, iconDark: assets.mysql },
   { icon: assets.vscode, iconDark: assets.vscode },
   { icon: assets.git, iconDark: assets.git },
-  { icon: assets.github, iconDark: assets.github_icon_dark },
+  { icon: assets.github_icon, iconDark: assets.github_icon_dark },
 ]
