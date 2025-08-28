@@ -1,9 +1,28 @@
 import { projectData } from '@/assets/assets'
 import Image from 'next/image'
 import React from 'react'
-import {motion} from 'motion/react'
+import { motion } from 'motion/react'
 
 const Projects = ({ isDarkMode }) => {
+  const handleLinkClick = (project) => {
+    if (project.title === 'Chat en tiempo real') {
+      const width = Math.floor(window.innerWidth / 2)
+      const height = Math.floor(window.innerHeight)
+      window.open(
+        project.link,
+        '_blank',
+        `width=${width},height=${height}, left=0, top=0, noopener, noreferrer`
+      )
+      window.open(
+        project.link,
+        '_blank',
+        `width=${width},height=${height}, left=${width}, top=0, noopener, noreferrer`
+      )
+    } else {
+      window.open(project.link, '_blank', `noopener, noreferrer`)
+    }
+  }
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -58,13 +77,15 @@ const Projects = ({ isDarkMode }) => {
             style={{ backgroundImage: `url(${project.bgImage})` }}
           >
             <motion.div
-              initial={{opacity: 0 }}
-              whileInView={{opacity: 1 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
               transition={{ delay: 1.1, duration: 0.5 }}
               className="[background-color:rgba(255,255,255,0.0)] backdrop-blur-sm w-8/13 rounded-md absolute bottom-5 right-2 -translate-x-1/2 py-3 px-5 flex flex-col gap-3 duration-500 group-hover:bottom-7 "
             >
               <div>
-                <h2 className={`font-semibold ${project.textColor}`}>{project.title}</h2>
+                <h2 className={`font-semibold ${project.textColor}`}>
+                  {project.title}
+                </h2>
               </div>
               <div className="flex flex-row items-start gap-2">
                 {project.techIcons.map((icon, index) => (
@@ -88,17 +109,17 @@ const Projects = ({ isDarkMode }) => {
                     className="w-6 transition-transform duration-200 hover:scale-110 hover:-translate-y-1"
                   />
                 </a>
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <button
+                  type="button"
+                  onClick={() => handleLinkClick(project)}
+                  className="bg-transparent p-0 border-none cursor-pointer"
                 >
                   <Image
                     src={project.linkIcon}
                     alt="Link Icon"
                     className="w-6 transition-transform duration-200 hover:scale-110 hover:-translate-y-1"
                   />
-                </a>
+                </button>
               </div>
             </motion.div>
           </motion.div>
