@@ -56,7 +56,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
             <a href="#top">Home</a>
           </li>
           <li>
-            <a href="#about">Sobre mí</a>
+            <a href="#about" className='whitespace-nowrap'>Sobre mí</a>
           </li>
           <li>
             <a href="#skills">Habilidades</a>
