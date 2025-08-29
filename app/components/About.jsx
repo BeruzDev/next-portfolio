@@ -10,7 +10,7 @@ const About = ({ isDarkMode }) => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
       id="about"
-      className="w-full px-[12%] py-10 scroll-mt-20 mb-24"
+      className="w-full px-4 sm:px-[12%] py-10 scroll-mt-20 mb-24"
     >
       <motion.h4
         initial={{ opacity: 0, y: -20 }}
@@ -44,16 +44,16 @@ const About = ({ isDarkMode }) => {
           <Image
             src={assets.user_image}
             alt="User Image"
-            className="w-full rounded-4xl"
+            className="w-64 sm:w-80 rounded-3xl max-w-none"
           />
         </motion.div>
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="flex-1"
+          className="flex-1 mx-4 sm:mx-0"
         >
-          <p className="mb-10 max-w-2xl">
+          <p className="w-full text-center mb-10 max-w-2xl mx-auto">
             Soy Albert Castro, desarrollador web, enfocado en aprender y
             profundizar en React, Supabase y SQL, y Node.js con Express. He
             realizado prácticas en Kennwort Consulting & Technologies, donde
@@ -68,12 +68,12 @@ const About = ({ isDarkMode }) => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 1 }}
-            className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl"
+            className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-full sm:max-w-3xl mx-auto justify-center"
           >
             {infoList.map((item, index) => (
               <motion.li
                 whileHover={{ scale: 1.05 }}
-                className="border-[0.5px] border-gray-400 rounded-xl p-6 hover:-translate-y-1 duration-500 hover:[box-shadow:var(--shadow)]"
+                className="w-full max-w-xs border-[0.5px] border-gray-400 rounded-xl p-6 hover:-translate-y-1 duration-500 hover:[box-shadow:var(--shadow)]"
                 key={index}
               >
                 <Image
@@ -114,7 +114,7 @@ const About = ({ isDarkMode }) => {
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 1.3, duration: 0.5 }}
-            className="my-6 [color:var(--color-text)]"
+            className="w-full max-w-xs my-6 [color:var(--color-text)]"
           >
             Stack Tecnológico
           </motion.h4>
@@ -129,7 +129,7 @@ const About = ({ isDarkMode }) => {
               <motion.li
                 whileHover={{ scale: 1.1 }}
                 key={index}
-                className="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500 hover:[box-shadow:var(--shadow)]"
+                className="flex items-center justify-center w-full sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500 hover:[box-shadow:var(--shadow)] max-w-xs"
               >
                 <Image src={isDarkMode ? tool.iconDark : tool.icon} alt="Tool icon" className="w-5 sm:w-7" />
               </motion.li>
