@@ -25,6 +25,7 @@ import node from './nodejs.png'
 import express from './express.png'
 import express_dark from './express_dark.png'
 import mongodb from './mongodb.png'
+import materialui from './materialui.png'
 import right_arrow_white from './right-arrow-white.png'
 import logo from './logo.png'
 import logo_dark from './logo_dark.png'
@@ -79,6 +80,7 @@ export const assets = {
   express_dark,
   frontend_icon,
   frontend_icon_dark,
+  materialui,
   git,
   github,
   github_icon,
@@ -137,6 +139,20 @@ export const projectData = [
       assets.supabase,
       assets.react_dark,
       assets.css,
+    ],
+  },
+  {
+    title: 'Javascript Quiz',
+    textColor: 'text-white',
+    bgImage: '/work-7.png',
+    githubLink: 'https://github.com/BeruzDev/java-script-quiz',
+    githubIcon: assets.github_icon_dark,
+    link: 'https://java-script-quiz-kappa.vercel.app/',
+    linkIcon: assets.link_icon_dark,
+    techIcons: [
+      assets.react_dark,
+      assets.typescript,
+      assets.materialui,
     ],
   },
   {

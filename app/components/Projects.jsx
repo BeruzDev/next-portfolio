@@ -73,14 +73,14 @@ const Projects = ({ isDarkMode }) => {
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}
             key={index}
-            className="aspect-square bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group [width:350px] [height:250px]"
+            className="[border:1px_solid_rgba(128,128,128,0.2)] aspect-square bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group [width:350px] [height:250px]"
             style={{ backgroundImage: `url(${project.bgImage})` }}
           >
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ delay: 1.1, duration: 0.5 }}
-              className="[background-color:rgba(255,255,255,0.0)] backdrop-blur-sm w-8/13 rounded-md absolute bottom-5 right-2 -translate-x-1/2 py-3 px-5 flex flex-col gap-3 duration-500 group-hover:bottom-7 "
+              className="[border:1px_solid_rgba(128,128,128,0.2)] [background-color:rgba(255,255,255,0.0)] backdrop-blur-sm w-8/13 rounded-md absolute bottom-5 right-2 -translate-x-1/2 py-3 px-5 flex flex-col gap-3 duration-500 group-hover:bottom-7 "
             >
               <div>
                 <h2 className={`font-semibold ${project.textColor}`}>
