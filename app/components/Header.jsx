@@ -41,9 +41,7 @@ const Header = ({ isDarkMode }) => {
         transition={{ duration: 0.6, delay: 0.7 }}
         className="max-w-2xl mx-auto"
       >
-        Soy un desarrollador web con experiencia en la creación de aplicaciones
-        modernas y eficientes. En busca de mi primer trabajo en el sector
-        tecnológico.
+        Enfocado en crear interfaces limpias, rápidas y usables. Trabajo con React y Node.js, disfruto transformando ideas en aplicaciones reales. Actualmente busco unirme a un equipo donde seguir aprendiendo y aportando desde el primer día.
       </motion.p>
 
       <div className="flex flex-col sm:flex-row items-center gap-4 mt-4">

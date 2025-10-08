@@ -242,7 +242,7 @@ export const infoList = [
     icon: assets.code_icon,
     iconDark: assets.code_icon_dark,
     title: 'Experiencia En Desarrollo Web',
-    description: 'Cuatro meses de practicas',
+    description: 'Un año de prácticas',
     subdescription: 'Kennwort Consulting',
     document: '/KENNWORT_CartaRecomendacionCastellano_AlbertCastroAlbacete.pdf',
     button: 'Referencias',

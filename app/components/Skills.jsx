@@ -36,9 +36,7 @@ const Skills = ({ isDarkMode }) => {
         transition={{ duration: 0.5, delay: 0.7 }}
         className="text-center max-w-2xl mx-auto mt-5 mb-12"
       >
-        He adquirido solidas habilidades blandas durante mi etapa como
-        modelista. Ahora estoy listo para aplicarlas y combinarlas con mis
-        habilidades técnicas en el desarrollo web.
+        Mi experiencia en entornos exigentes me ha permitido fortalecer habilidades blandas clave como liderazgo, adaptabilidad y colaboración, que junto a mis conocimientos en front-end y back-end me convierten en un desarrollador web completo y orientado a resultados
       </motion.p>
 
       <motion.div

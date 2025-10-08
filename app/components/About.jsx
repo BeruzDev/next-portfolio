@@ -54,14 +54,7 @@ const About = ({ isDarkMode }) => {
           className="flex-1 mx-4 sm:mx-0"
         >
           <p className="w-full text-center mb-10 max-w-2xl mx-auto">
-            Soy Albert Castro, desarrollador web, enfocado en aprender y
-            profundizar en React, Supabase y SQL, y Node.js con Express. He
-            realizado prácticas en Kennwort Consulting & Technologies, donde
-            trabajé en proyectos Saas reales enfocados en la venta de entradas y
-            control de acceso de gimnasios. Con 10 años de experiencia previa
-            como modelista en el sector automovilistico, con un entorno
-            exigente, destaco por mi capacidad de trabajo en equipo y resolución
-            de problemas. Siempre dispuesto a mejorar.
+            Soy Albert Castro, desarrollador web especializado en React, Node.js con Express, Supabase y SQL. He participado en proyectos SaaS reales durante mis prácticas en Kennwort Consulting & Technologies, trabajando en aplicaciones para venta de entradas y gestión de acceso en gimnasios. Con 10 años de experiencia previa en el sector automovilístico como modelista, en entornos altamente exigentes, destaco por mi capacidad para trabajar en equipo, resolver problemas y adaptarme rápidamente a nuevas tecnologías. Me apasiona seguir aprendiendo y crear soluciones web eficientes y escalables.
           </p>
 
           <motion.ul

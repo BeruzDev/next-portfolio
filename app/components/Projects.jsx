@@ -55,11 +55,7 @@ const Projects = ({ isDarkMode }) => {
         transition={{ delay: 0.7, duration: 0.5 }}
         className="text-center max-w-2xl mx-auto mt-5 mb-12"
       >
-        Bienvenidos a mi portafolio, donde podrás explorar mis proyectos más
-        recientes y ver cómo he aplicado mis habilidades en el desarrollo web.
-        Desde un acortador de enlaces, hasta un traductor que utiliza
-        inteligencia artificial para traducir y detectar idiomas, pasando por
-        juego de mecanografía o una extension para Visual Studio Code.
+        En este portafolio encontrarás una selección de proyectos que muestran mi enfoque práctico en desarrollo web. Desde un acortador de enlaces hasta un traductor impulsado por inteligencia artificial, así como un juego de mecanografía y una extensión para Visual Studio Code, cada proyecto refleja mis habilidades técnicas y mi capacidad para resolver problemas reales.
       </motion.p>
 
       <motion.div
