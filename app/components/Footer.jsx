@@ -1,8 +1,8 @@
-import { assets } from '@/assets/assets'
+import { assets, footerLang } from '@/assets/assets'
 import Image from 'next/image'
 import React, { useState } from 'react'
 
-const Footer = ({ isDarkMode }) => {
+const Footer = ({ isDarkMode, language }) => {
   const [copied, setCopied] = useState(false)
   const [animate, setAnimate] = useState(false)
   const email = 'albertus1291@gmail.com'
@@ -41,7 +41,7 @@ const Footer = ({ isDarkMode }) => {
 
       <div className="text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] mt-12 py-6">
         <p>
-          Desarrollado por BeruzDev
+          {footerLang[language]}
           <Image
             src={assets.heart_icon}
             alt="Heart Icon"

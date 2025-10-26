@@ -1,14 +1,14 @@
 import Image from 'next/image'
-import { assets } from '@/assets/assets'
+import { assets, contactLang } from '@/assets/assets'
 import React, { useState } from 'react'
 import { motion } from 'motion/react'
 
-const Contact = ({ idDarkMode }) => {
+const Contact = ({ idDarkMode, language }) => {
   const [result, setResult] = useState('')
 
   const onSubmit = async (event) => {
     event.preventDefault()
-    setResult('Enviando....')
+    setResult(language === 'es' ? 'Enviando....' : 'Sending....')
     const formData = new FormData(event.target)
 
     formData.append('access_key', 'e141a586-9973-4a5c-8f44-7fb4f5fdab36')
@@ -21,7 +21,7 @@ const Contact = ({ idDarkMode }) => {
     const data = await response.json()
 
     if (data.success) {
-      setResult('Formulario enviado con éxito')
+      setResult(language === 'es' ? 'Formulario enviado con éxito' : 'Form sent successfully')
       event.target.reset()
     } else {
       console.log('Error', data)
@@ -43,7 +43,7 @@ const Contact = ({ idDarkMode }) => {
         transition={{ delay: 0.3, duration: 0.5 }}
         className="text-center mb-2 text-lg"
       >
-        Quedo a tu disposición
+        {contactLang[language].title}
       </motion.h4>
       <motion.h2
         initial={{ y: -20, opacity: 0 }}
@@ -51,7 +51,7 @@ const Contact = ({ idDarkMode }) => {
         transition={{ delay: 0.5, duration: 0.5 }}
         className="text-center text-5xl "
       >
-        Contáctame
+        {contactLang[language].subtitle}
       </motion.h2>
 
       <motion.p
@@ -60,7 +60,7 @@ const Contact = ({ idDarkMode }) => {
         transition={{ delay: 0.7, duration: 0.5 }}
         className="text-center max-w-2xl mx-auto mt-5 mb-12"
       >
-        Si tienes alguna pregunta, consulta o feedback, no dudes en contactarme.
+        {contactLang[language].text}
       </motion.p>
 
       <motion.form
@@ -77,7 +77,7 @@ const Contact = ({ idDarkMode }) => {
             transition={{ delay: 1.1, duration: 0.6 }}
             className="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md [color:var(--color-text)] [placeholder-color:var(--color-hover)]"
             type="text"
-            placeholder="Introduce tu nombre"
+            placeholder={contactLang[language].namePlaceholder}
             required
             name="name"
           />
@@ -85,9 +85,9 @@ const Contact = ({ idDarkMode }) => {
             initial={{ x: 50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ delay: 1.2, duration: 0.6 }}
-            className="flex-1 p-3 otuline-none border-[0.5px] border-gray-400 rounded-md [color:var(--color-text)] [placeholder-color:var(--color-hover)]"
+            className="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md [color:var(--color-text)] [placeholder-color:var(--color-hover)]"
             type="email"
-            placeholder="Introduce tu correo electrónico"
+            placeholder={contactLang[language].emailPlaceholder}
             required
             name="email"
           />
@@ -98,7 +98,7 @@ const Contact = ({ idDarkMode }) => {
           transition={{ delay: 1.3, duration: 0.6 }}
           className="resize-none w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md [color:var(--color-text)] [placeholder-color:var(--color-hover)] mb-6"
           rows="6"
-          placeholder="Introduce tu mensaje"
+          placeholder={contactLang[language].messagePlaceholder}
           required
           name="message"
         ></motion.textarea>
@@ -111,7 +111,7 @@ const Contact = ({ idDarkMode }) => {
           className="py-3 px-8 w-max flex items-center justify-between gap-2 [background-color:var(--color-dark-button)] text-white rounded-full mx-auto hover:bg-black duration-500 cursor-pointer"
           type="submit"
         >
-          Enviar
+          {contactLang[language].button}
           <Image
             src={
               idDarkMode

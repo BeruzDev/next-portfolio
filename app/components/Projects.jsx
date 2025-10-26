@@ -1,9 +1,9 @@
-import { projectData } from '@/assets/assets'
+import { projectData, projectsLang } from '@/assets/assets'
 import Image from 'next/image'
 import React from 'react'
 import { motion } from 'motion/react'
 
-const Projects = ({ isDarkMode }) => {
+const Projects = ({ language }) => {
   const handleLinkClick = (project) => {
     if (project.title === 'Chat en tiempo real') {
       const width = Math.floor(window.innerWidth / 2)
@@ -37,7 +37,7 @@ const Projects = ({ isDarkMode }) => {
         transition={{ delay: 0.3, duration: 0.5 }}
         className="text-center mb-2 text-lg"
       >
-        Mis últimos
+        {projectsLang[language].title}
       </motion.h4>
 
       <motion.h2
@@ -46,7 +46,7 @@ const Projects = ({ isDarkMode }) => {
         transition={{ delay: 0.5, duration: 0.5 }}
         className="text-center text-5xl "
       >
-        Proyectos
+        {projectsLang[language].subtitle}
       </motion.h2>
 
       <motion.p
@@ -55,7 +55,7 @@ const Projects = ({ isDarkMode }) => {
         transition={{ delay: 0.7, duration: 0.5 }}
         className="text-center max-w-2xl mx-auto mt-5 mb-12"
       >
-        En este portafolio encontrarás una selección de proyectos que muestran mi enfoque práctico en desarrollo web. Desde un acortador de enlaces hasta un traductor impulsado por inteligencia artificial, así como un juego de mecanografía y una extensión para Visual Studio Code, cada proyecto refleja mis habilidades técnicas y mi capacidad para resolver problemas reales.
+        {projectsLang[language].text}
       </motion.p>
 
       <motion.div
@@ -80,7 +80,7 @@ const Projects = ({ isDarkMode }) => {
             >
               <div>
                 <h2 className={`font-semibold ${project.textColor}`}>
-                  {project.title}
+                  {projectsLang[language].projectsTitle[index]}
                 </h2>
               </div>
               <div className="flex flex-row items-start gap-2">

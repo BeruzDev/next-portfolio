@@ -149,11 +149,7 @@ export const projectData = [
     githubIcon: assets.github_icon_dark,
     link: 'https://java-script-quiz-kappa.vercel.app/',
     linkIcon: assets.link_icon_dark,
-    techIcons: [
-      assets.react_dark,
-      assets.typescript,
-      assets.materialui,
-    ],
+    techIcons: [assets.react_dark, assets.typescript, assets.materialui],
   },
   {
     title: 'Traductor con IA',
@@ -173,7 +169,12 @@ export const projectData = [
     githubIcon: assets.github_icon_dark,
     link: 'https://chat-node-js-2u1m.onrender.com/',
     linkIcon: assets.link_icon_dark,
-    techIcons: [assets.node, assets.express_dark, assets.shocketio_dark, assets.mysql],
+    techIcons: [
+      assets.node,
+      assets.express_dark,
+      assets.shocketio_dark,
+      assets.mysql,
+    ],
   },
   {
     title: 'Animación de scroll',
@@ -277,3 +278,188 @@ export const toolsData = [
   { icon: assets.git, iconDark: assets.git },
   { icon: assets.github_icon, iconDark: assets.github_icon_dark },
 ]
+
+//Language options
+
+export const navbarLang = {
+  es: {
+    home: 'Inicio',
+    about: 'Sobre mí',
+    skills: 'Habilidades',
+    projects: 'Proyectos',
+    contact: 'Contáctame',
+  },
+  en: {
+    home: 'Home',
+    about: 'About Me',
+    skills: 'Skills',
+    projects: 'Projects',
+    contact: 'Contact Me',
+  },
+}
+
+export const headerLang = {
+  es: {
+    title: 'Hola! Soy Albert Castro',
+    subtitle: 'Desarrollador Web',
+    text: 'Enfocado en crear interfaces limpias, rápidas y usables. Trabajo con React y Node.js, disfruto transformando ideas en aplicaciones reales. Actualmente busco unirme a un equipo donde seguir aprendiendo y aportando desde el primer día.',
+    contactBtn: 'Contáctame',
+    downloadBtn: 'Descargar CV',
+  },
+  en: {
+    title: 'Hello! I am Albert Castro',
+    subtitle: 'Web Developer',
+    text: 'Focused on creating clean, fast, and user-friendly interfaces. I work with React and Node.js, enjoying transforming ideas into real applications. I am currently looking to join a team where I can continue learning and contributing from day one.',
+    contactBtn: 'Contact Me',
+    downloadBtn: 'Download CV',
+  }
+}
+
+export const aboutLang = {
+  es: {
+    title: 'Conoce más',
+    subtitle: 'Sobre mí',
+    text:'Soy Albert Castro, desarrollador web especializado en React, Node.js con Express, Supabase y SQL. He participado en proyectos SaaS reales durante mis prácticas en Kennwort Consulting & Technologies, trabajando en aplicaciones para venta de entradas y gestión de acceso en gimnasios. Con 10 años de experiencia previa en el sector automovilístico como modelista, en entornos altamente exigentes, destaco por mi capacidad para trabajar en equipo, resolver problemas y adaptarme rápidamente a nuevas tecnologías. Me apasiona seguir aprendiendo y crear soluciones web eficientes y escalables.',
+    cards: [
+      {
+        title: 'Experiencia En Desarrollo Web',
+        description: 'Un año de prácticas',
+        subdescription: 'Kennwort Consulting',
+        button: 'Referencias',
+        document: '/KENNWORT_CartaRecomendacionCastellano_AlbertCastroAlbacete.pdf'
+      },
+      {
+        title: 'Experiencia como Modelista',
+        description: 'Diez años como Clay Modeler',
+        subdescription: 'EDAG Engineering Spain S.L.',
+        button: 'Recomendación',
+        document: '/EDAG_CartaRecomendacion_AlbertCastroAlbacete_CENSORED.pdf'
+      },
+      {
+        title: 'Educación Formación Profesional',
+        description: 'ILERNA',
+        subdescription: 'Desarrollo Aplicaciones Web',
+        button: 'Expediente',
+        document: '/finished_grade_certificate_CENSORED.pdf'
+      }
+    ],
+    stack: 'Stack Tecnológico',
+  },
+  en: {
+    title: 'Learn More',
+    subtitle: 'About Me',
+    text:'I am Albert Castro, a web developer specialized in React, Node.js with Express, Supabase, and SQL. I have participated in real SaaS projects during my internship at Kennwort Consulting & Technologies, working on applications for ticket sales and access management in gyms. With 10 years of previous experience in the automotive sector as a modeler, in highly demanding environments, I stand out for my ability to work in a team, solve problems, and quickly adapt to new technologies. I am passionate about continuing to learn and creating efficient and scalable web solutions.',
+    cards: [
+      {
+        title: 'Web Development',
+        description: 'One year of internship',
+        subdescription: 'Kennwort Consulting',
+        button: 'References',
+        document: '/KENNWORT_CartaRecomendacionCastellano_AlbertCastroAlbacete-EN.pdf'
+      },
+      {
+        title: 'Clay Modeller',
+        description: 'Ten years experience',
+        subdescription: 'EDAG Engineering Spain S.L.',
+        button: 'Recommendation',
+        document: '/EDAG_CartaRecomendacion_AlbertCastroAlbacete_CENSORED-EN.pdf'
+      },
+      {
+        title: 'Higher Grade Vocational',
+        description: 'ILERNA',
+        subdescription: 'Web Development',
+        button: 'Transcript',
+        document: '/finished_grade_certificate_CENSORED.pdf'
+      }
+    ],
+    stack: 'Technology Stack',
+  }
+}
+
+export const skillsLang = {
+  es: {
+    title: 'Estas son mis',
+    subtitle: 'Habilidades',
+    text: 'Mi experiencia en entornos exigentes me ha permitido fortalecer habilidades blandas clave como liderazgo, adaptabilidad y colaboración, que junto a mis conocimientos en front-end y back-end me convierten en un desarrollador web completo y orientado a resultados',
+    softSkills: [
+      'Trabajo en equipo',
+      'Pensamiento crítico',
+      'Resolución de problemas',
+      'Adaptabilidad',
+      'Comunicación efectiva',
+    ],
+    button: 'Ver más',
+    softSkillsLink: '/EDAG_CartaRecomendacion_AlbertCastroAlbacete_CENSORED.pdf',
+  },
+  en: {
+    title: 'These are my',
+    subtitle: 'Skills',
+    text: 'My experience in demanding environments has allowed me to strengthen key soft skills such as leadership, adaptability and collaboration, which together with my front-end and back-end knowledge make me a complete and results-oriented web developer',
+    softSkills: [
+      'Teamwork',
+      'Critical thinking',
+      'Problem solving',
+      'Adaptability',
+      'Effective communication',
+    ],
+    button: 'See more',
+    softSkillsLink: '/EDAG_CartaRecomendacion_AlbertCastroAlbacete_CENSORED-EN.pdf',
+  }
+}
+
+export const projectsLang = {
+  es: {
+    title: 'Mis últimos',
+    subtitle: 'Proyectos',
+    text: 'En este portafolio encontrarás una selección de proyectos que muestran mi enfoque práctico en desarrollo web. Desde un acortador de enlaces hasta un traductor impulsado por inteligencia artificial, así como un juego de mecanografía y una extensión para Visual Studio Code, cada proyecto refleja mis habilidades técnicas y mi capacidad para resolver problemas reales.',
+    projectsTitle: [
+      'Acortador de URLs',
+      'Juego de JavaScript',
+      'Traductor con IA',
+      'Chat en tiempo real',
+      'Animación de scroll',
+      'Juego de mecanografía',
+      'Extensión VSCode',
+    ]
+  },
+  en: {
+    title: 'My Latest',
+    subtitle: 'Projects',
+    text: 'In this portfolio you will find a selection of projects that showcase my hands-on approach to web development. From a link shortener to an AI-powered translator, as well as a typing game and a Visual Studio Code extension, each project reflects my technical skills and my ability to solve real-world problems.',
+    projectsTitle: [
+      'URL Shortener',
+      'JavaScript Quiz',
+      'AI Translator',
+      'Real-time Chat',
+      'Scroll Animation',
+      'Typing Game',
+      'VSCode Extension',
+    ]
+  }
+}
+
+export const contactLang = {
+  es: {
+    title: 'Quedo a tu disposición',
+    subtitle: 'Contáctame',
+    text: 'Si tienes alguna pregunta, consulta o feedback, no dudes en contactarme.',
+    namePlaceholder: 'Introduce tu nombre',
+    emailPlaceholder: 'Introduce tu correo electrónico',
+    messagePlaceholder: 'Introduce tu mensaje',
+    button: 'Enviar'
+  },
+  en: {
+    title: 'I am at your disposal',
+    subtitle: 'Contact Me',
+    text: 'If you have any questions, inquiries, or feedback, please feel free to reach out to me.',
+    namePlaceholder: 'Your Name',
+    emailPlaceholder: 'Your Email',
+    messagePlaceholder: 'Your Message',
+    button: 'Send'
+  }
+}
+
+export const footerLang = {
+  es: 'Desarrollado por BeruzDev',
+  en: 'Developed by BeruzDev',
+}

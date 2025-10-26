@@ -1,9 +1,9 @@
-import { assets } from '@/assets/assets'
+import { assets, headerLang } from '@/assets/assets'
 import Image from 'next/image'
 import React from 'react'
 import { motion } from 'motion/react'
 
-const Header = ({ isDarkMode }) => {
+const Header = ({ isDarkMode, language }) => {
   return (
     <div className="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4">
       <motion.div
@@ -23,7 +23,7 @@ const Header = ({ isDarkMode }) => {
         transition={{ duration: 0.6, delay: 0.3 }}
         className="flex items-end gap-2 text-xl md:text-2xl mb-3"
       >
-        Hola! Soy Albert Castro{' '}
+        {headerLang[language].title}{' '}
       </motion.h3>
 
       <motion.h1
@@ -32,7 +32,7 @@ const Header = ({ isDarkMode }) => {
         transition={{ duration: 0.8, delay: 0.5 }}
         className="text-3xl sm:text-6xl lg:text-[66px]"
       >
-        Desarrollador Web
+        {headerLang[language].subtitle}
       </motion.h1>
 
       <motion.p
@@ -41,7 +41,7 @@ const Header = ({ isDarkMode }) => {
         transition={{ duration: 0.6, delay: 0.7 }}
         className="max-w-2xl mx-auto"
       >
-        Enfocado en crear interfaces limpias, rápidas y usables. Trabajo con React y Node.js, disfruto transformando ideas en aplicaciones reales. Actualmente busco unirme a un equipo donde seguir aprendiendo y aportando desde el primer día.
+        {headerLang[language].text}
       </motion.p>
 
       <div className="flex flex-col sm:flex-row items-center gap-4 mt-4">
@@ -52,7 +52,7 @@ const Header = ({ isDarkMode }) => {
           href="#contact"
           className="px-10 py-3 rounded-full [background-color:var(--color-dark-button)] hover:bg-black text-white flex items-center gap-2"
         >
-          Contáctame{' '}
+          {headerLang[language].contactBtn}{' '}
           <Image
             src={assets.right_arrow_white}
             alt="Right Arrow Icon"
@@ -63,11 +63,11 @@ const Header = ({ isDarkMode }) => {
           initial={{ y: 30, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 1.2 }}
-          href="/Albert-Castro-CV.pdf"
+          href={language === 'es' ? '/Albert-Castro-CV.pdf' : '/Albert-Castro-CV-EN.pdf'}
           download
           className="px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2"
         >
-          Descargar CV{' '}
+          {headerLang[language].downloadBtn}{' '}
           <Image
             src={isDarkMode ? assets.download_icon_dark : assets.download_icon}
             alt="Right Arrow Icon"

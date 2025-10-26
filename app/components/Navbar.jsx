@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
-import { assets } from '@/assets/assets'
+import { assets, navbarLang } from '@/assets/assets'
 
-const Navbar = ({ isDarkMode, setIsDarkMode }) => {
+const Navbar = ({ isDarkMode, setIsDarkMode, language, toggleLanguage }) => {
   const [isScroll, setIsScroll] = useState(false)
   const sideMenuRef = useRef()
   const openMenu = () => {
@@ -53,16 +53,24 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
           }`}
         >
           <li>
-            <a href="#top">Home</a>
+            <a href="#top">
+             {language === 'es' ? navbarLang.es.home : navbarLang.en.home}
+            </a>
           </li>
           <li>
-            <a href="#about" className='whitespace-nowrap'>Sobre mí</a>
+            <a href="#about" className="whitespace-nowrap">
+              {language === 'es' ? navbarLang.es.about : navbarLang.en.about}
+            </a>
           </li>
           <li>
-            <a href="#skills">Habilidades</a>
+            <a href="#skills">
+              {language === 'es' ? navbarLang.es.skills : navbarLang.en.skills}
+            </a>
           </li>
           <li>
-            <a href="#projects">Proyectos</a>
+            <a href="#projects">
+              {language === 'es' ? navbarLang.es.projects : navbarLang.en.projects}
+            </a>
           </li>
           <li>
             <a
@@ -117,11 +125,19 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
             />
           </button>
 
+          <button
+            onClick={toggleLanguage}
+            alt="Change language"
+            className="w-6 cursor-pointer font-medium"
+          >
+            {language === 'es' ? 'EN' : 'ES'}
+          </button>
+
           <a
             href="#contact"
             className="hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4"
           >
-            Contáctame{' '}
+            {language === 'es' ? navbarLang.es.contact : navbarLang.en.contact}{' '}
             <Image
               src={isDarkMode ? assets.arrow_icon_dark : assets.arrow_icon}
               alt="Contact"
@@ -154,19 +170,29 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
           </div>
 
           <li onClick={closeMenu}>
-            <a href="#top">Home</a>
+            <a href="#top">
+              {language === 'es' ? navbarLang.es.home : navbarLang.en.home}
+            </a>
           </li>
           <li onClick={closeMenu}>
-            <a href="#about">Sobre mí</a>
+            <a href="#about">
+              {language === 'es' ? navbarLang.es.about : navbarLang.en.about}
+            </a>
           </li>
           <li onClick={closeMenu}>
-            <a href="#skills">Habilidades</a>
+            <a href="#skills">
+              {language === 'es' ? navbarLang.es.skills : navbarLang.en.skills}
+            </a>
           </li>
           <li onClick={closeMenu}>
-            <a href="#projects">Proyectos</a>
+            <a href="#projects">
+              {language === 'es' ? navbarLang.es.projects : navbarLang.en.projects}
+            </a>
           </li>
           <li onClick={closeMenu}>
-            <a href="#contact">Contáctame</a>
+            <a href="#contact">
+              {language === 'es' ? navbarLang.es.contact : navbarLang.en.contact}
+            </a>
           </li>
         </ul>
       </nav>

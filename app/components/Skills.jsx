@@ -1,10 +1,10 @@
 import React from 'react'
 import { skillsData } from '@/assets/assets'
-import { assets } from '@/assets/assets'
+import { assets, skillsLang } from '@/assets/assets'
 import Image from 'next/image'
 import { motion } from 'motion/react'
 
-const Skills = ({ isDarkMode }) => {
+const Skills = ({ isDarkMode, language }) => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -19,7 +19,7 @@ const Skills = ({ isDarkMode }) => {
         transition={{ duration: 0.5, delay: 0.3 }}
         className="text-center mb-2 text-lg"
       >
-        Estas son mis
+        {skillsLang[language].title}
       </motion.h4>
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
@@ -27,7 +27,7 @@ const Skills = ({ isDarkMode }) => {
         transition={{ duration: 0.5, delay: 0.5 }}
         className="text-center text-5xl "
       >
-        Habilidades
+        {skillsLang[language].subtitle}
       </motion.h2>
 
       <motion.p
@@ -36,7 +36,7 @@ const Skills = ({ isDarkMode }) => {
         transition={{ duration: 0.5, delay: 0.7 }}
         className="text-center max-w-2xl mx-auto mt-5 mb-12"
       >
-        Mi experiencia en entornos exigentes me ha permitido fortalecer habilidades blandas clave como liderazgo, adaptabilidad y colaboración, que junto a mis conocimientos en front-end y back-end me convierten en un desarrollador web completo y orientado a resultados
+        {skillsLang[language].text}
       </motion.p>
 
       <motion.div
@@ -60,7 +60,10 @@ const Skills = ({ isDarkMode }) => {
               {skills.title}
             </h3>
             <ul className="space-y-2">
-              {skills.skills.map((skill, index) => (
+              {(skills.title === 'Soft Skills'
+                ? skillsLang[language].softSkills
+                : skills.skills
+              ).map((skill, index) => (
                 <li
                   key={index}
                   className="text-sm [color:var(--color-text)] leading-5"
@@ -70,7 +73,11 @@ const Skills = ({ isDarkMode }) => {
               ))}
             </ul>
             <a
-              href={skills.link}
+              href={
+                skills.title === 'Soft Skills'
+                  ? skillsLang[language].softSkillsLink
+                  : skills.link
+              }
               target={skills.title === 'Soft Skills' ? '_blank' : undefined}
               rel={
                 skills.title === 'Soft Skills'
@@ -79,7 +86,7 @@ const Skills = ({ isDarkMode }) => {
               }
               className="flex items-center gap-2 text-sm mt-5 hover:[color:var(--color-hover)]"
             >
-              Ver más{' '}
+              {skillsLang[language].button}{' '}
               <Image
                 src={
                   isDarkMode

@@ -10,6 +10,7 @@ import { useEffect, useState } from 'react'
 
 export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(false)
+  const [language, setLanguage] = useState('es')
 
   useEffect(() => {
     if(localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)){
@@ -18,6 +19,8 @@ export default function Home() {
       setIsDarkMode(false)
     }
     
+    const savedLanguage = localStorage.getItem('language') || 'es'
+    setLanguage(savedLanguage)
   }, []);
 
   useEffect(() => {
@@ -30,15 +33,28 @@ export default function Home() {
     }
   }, [isDarkMode])
 
+  useEffect(() => {
+    localStorage.setItem('language', language)
+  }, [language])
+
+  const toggleLanguage = () => {
+    setLanguage(prev => prev === 'es' ? 'en' : 'es')
+  }
+
   return (
     <>
-      <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
-      <Header isDarkMode={isDarkMode} />
-      <About isDarkMode={isDarkMode} />
-      <Skills isDarkMode={isDarkMode} />
-      <Projects isDarkMode={isDarkMode} />
-      <Contact isDarkMode={isDarkMode} />
-      <Footer isDarkMode={isDarkMode} />
+      <Navbar 
+        isDarkMode={isDarkMode} 
+        setIsDarkMode={setIsDarkMode}
+        language={language}
+        toggleLanguage={toggleLanguage}
+      />
+      <Header isDarkMode={isDarkMode} language={language} />
+      <About isDarkMode={isDarkMode} language={language} />
+      <Skills isDarkMode={isDarkMode} language={language} />
+      <Projects isDarkMode={isDarkMode} language={language} />
+      <Contact isDarkMode={isDarkMode} language={language} />
+      <Footer isDarkMode={isDarkMode} language={language} />
     </>
   )
 }
